@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +8,6 @@
     <link rel="manifest" href="manifest.json">
     <script defer src="js/app.js"></script>
 </head>
-
 <body class="bg-gray-100 flex flex-col items-center min-h-screen">
 
     <h1 class="text-3xl font-bold my-6">Список продуктов</h1>
@@ -35,20 +33,5 @@
         <input type="text" id="taskInput" class="border flex-1 p-2 rounded" placeholder="Введите название продукта">
         <button class="bg-blue-500 text-white px-4 py-2 rounded" onclick="addTask()">+</button>
     </footer>
-
-    <script>
-        // Функция для корректной установки высоты списка задач
-        function setTaskListHeight() {
-            const footerHeight = document.getElementById('taskFooter').offsetHeight;  // Получаем высоту футера
-            const taskList = document.getElementById('taskList');
-            taskList.style.maxHeight = `calc(100vh - ${footerHeight + 80}px)`;  // Устанавливаем max-height с учетом футера
-        }
-
-        // Вызываем функцию при загрузке страницы и при изменении размера окна
-        window.addEventListener('load', setTaskListHeight);
-        window.addEventListener('resize', setTaskListHeight);  // Обновляем при изменении размера экрана
-    </script>
-
 </body>
-
 </html>

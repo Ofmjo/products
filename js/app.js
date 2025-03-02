@@ -143,3 +143,14 @@ function showNotification(message) {
     notification.classList.remove('hidden');
     setTimeout(() => notification.classList.add('hidden'), 3000);
 }
+
+// Функция для корректной установки высоты списка задач
+function setTaskListHeight() {
+    const footerHeight = document.getElementById('taskFooter').offsetHeight;  // Получаем высоту футера
+    const taskList = document.getElementById('taskList');
+    taskList.style.maxHeight = `calc(100vh - ${footerHeight + 80}px)`;  // Устанавливаем max-height с учетом футера
+}
+
+// Вызываем функцию при загрузке страницы и при изменении размера окна
+window.addEventListener('load', setTaskListHeight);
+window.addEventListener('resize', setTaskListHeight);  // Обновляем при изменении размера экрана
