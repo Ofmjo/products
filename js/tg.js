@@ -1,3 +1,5 @@
 let tg = window.Telegram.WebApp;
 tg.expand();
-alert(tg.initDataUnsafe.user.username);
+
+//Аватар пользователя в телеграм
+const user_img = tg.initDataUnsafe?.user?.photo_url || "../assets/nouser.png";
