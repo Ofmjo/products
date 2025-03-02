@@ -1,7 +1,7 @@
 import { writeFile, readFile } from 'fs/promises';
 
 export default async function handler(req, res) {
-    const filePath = './data/tasks.json';
+    const filePath = '../data/tasks.json';
 
     if (req.method === 'POST') {
         try {
