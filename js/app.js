@@ -2,7 +2,7 @@ const documentRoot = `${window.location.protocol}//${window.location.host}/`;
 const apiPath = documentRoot+'/api/backend.php';
 
 if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register(documentRoot+'/service-worker.js')
+    navigator.serviceWorker.register(documentRoot+'service-worker.js')
         .then(() => console.log('Service Worker зарегистрирован!'))
         .catch(err => console.log('Ошибка SW:', err));
 }
