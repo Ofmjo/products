@@ -1,6 +1,6 @@
 const documentRoot = `${window.location.protocol}//${window.location.host}/`;
-//const apiPathPHP = documentRoot+'/api/backend.php'; //PHP
-const apiPath = documentRoot+"api/handler"; //NodeJs
+//const apiPathPHP = documentRoot+'/api/backend.php'; //PHP API
+const apiPath = documentRoot+"api/handler"; //NodeJs API
 
 if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register(documentRoot+'service-worker.js')
