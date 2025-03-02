@@ -1,5 +1,5 @@
 const CACHE_NAME = 'todo-pwa-cache-v1';
-const urlsToCache = ['/', '/index.html', '/assets/styles.css', '/js/app.js', '/icons/favicon.ico'];
+const urlsToCache = ['/', '/index.html', '/assets/styles.css', '/js/app.js', '/favicon.ico'];
 
 self.addEventListener('install', event => {
     event.waitUntil(
